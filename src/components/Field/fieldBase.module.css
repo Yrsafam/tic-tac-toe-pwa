@@ -1,0 +1,26 @@
+.fieldBase {
+  --size: 104px;
+
+  display: flex;
+  width: var(--size);
+  height: var(--size);
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--field-color-disabled);
+  background-color: transparent;
+}
+
+.fieldBase:has(> .fieldBase__input:checked) {
+  border-color: var(--field-color-x);
+  background-color: rgb(70 163 255 / 0.2);
+}
+
+.fieldBase__input {
+  display: none;
+}
+
+.fieldBase_zero:has(> .fieldBase__input:checked) {
+  border-color: var(--field-color-zero);
+  background-color: rgb(255 130 126 / 0.2);
+}
